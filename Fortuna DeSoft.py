@@ -52,7 +52,7 @@ while T == True:
                     while resposta != "A"and resposta != "B"and resposta != "C"and resposta != "D"and  resposta != "ajuda"and resposta != "pula"and resposta != "parar":
                         print("Opção inválida!"'\n'"As opções de resposta são  A, B, C, D, ajuda, pula e parar!")
                         resposta = input('\n'"Qual sua resposta?!")
-                    if resposta == questaoatual["correta"]:
+                    if resposta == questaoatual["correta"] and id<=9:
                         modorepete = False
                         print ("Você acertou! Seu prêmio atula é de R$ {}".format(Lpremio[id]))
                         if id ==3:
@@ -60,14 +60,24 @@ while T == True:
                         if id == 6:
                             print('\n'"HEY! Você passou para o Nível DIFICIL!")
                         id +=1
-                        if id ==10 :
-                            print("PARABÉNS, você zerou o jogo e ganhou um milhão de reais")
+                
                         while T4 == True and id<10:
                             Continuarfinal = input("Aperte ENTER para continuar...")
                             if Continuarfinal == "":
                                 T4 = False
                             else:
                                 Continuarfinal =input("Aperte ENTER para continuar...")
+                    if resposta == questaoatual["correta"] and id==10:
+                        print("PARABÉNS, você zerou o jogo e ganhou um milhão de reais")
+                        jogardnv = input("Gostaria de jogar de novo [S/N]?")
+                        while jogardnv != "S" and jogardnv != "N":
+                            print("Opção inválida!")
+                            jogardnv = input("Gostaria de jogar de novo [S/N]?")
+                        if jogardnv == "S":
+                            id = 1
+                        if jogardnv == "N":
+                            T3 = False
+                        print("Jogo encerrado")   
                     if resposta == "pula" and Pulos>0:
                         Avisafinal = True
                         T5 = True
@@ -149,6 +159,7 @@ while T == True:
                                 jogardnv = input("Gostaria de jogar de novo [S/N]?")
                                 if jogardnv == "S":
                                     id = 1
+                                    Questoesusa =[]
                                 if jogardnv == "N":
                                     T3 = False
                             print("Jogo encerrado")
@@ -163,12 +174,12 @@ while T == True:
                         while jogardnv != "S" and jogardnv != "N":
                             print("Opção inválida!")
                             jogardnv = input("Gostaria de jogar de novo [S/N]?")
-                        if jogardnv == "N":
-                            id = 1
                         if jogardnv == "S":
+                            id = 1
+                            Questoesusa =[]
+                        if jogardnv == "N":
                             T3 = False
                             print("Jogo encerrado")
-
 
             else:
                 Continuar =input("Aperte ENTER para continuar...")
