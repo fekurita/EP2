@@ -9,7 +9,7 @@ Lpremio=[0.00,1000.00,5000.00,10000.00,30000.00,50000.00,100000.00,300000.00,500
 
 print ("Olá! Você está na Fortuna DeSoft e terá a oportunidade de enriquecer!"'\n')
 Nome =input("Qual seu nome?")
-print('\n'"Ok {0}, você tem direito a pular 3 vezes e 2 ajudas!"'\n'"As opções de resposta são A, B, C, D, ajuda, pula e parar!"'\n'.format(Nome.upper()))
+print('\n'"Ok {0}, você tem direito a pular 3 vezes e 2 ajudas!"'\n''As opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!''\n'.format(Nome.upper()))
 Comeco =input("Aperte ENTER para continuar...")
 
 T = True
@@ -50,7 +50,7 @@ while T == True:
                     print(questaoatualtexto)
                     resposta = input('\n'"Qual sua resposta?!")
                     while resposta != "A"and resposta != "B"and resposta != "C"and resposta != "D"and  resposta != "ajuda"and resposta != "pula"and resposta != "parar":
-                        print("Opção inválida!"'\n'"As opções de resposta são  A, B, C, D, ajuda, pula e parar!")
+                        print("Opção inválida!"'\n''As opções de resposta são  "A", "B", "C", "D", "ajuda", "pula" e "parar"!')
                         resposta = input('\n'"Qual sua resposta?!")
                     if resposta == questaoatual["correta"] and id<=9:
                         modorepete = False
@@ -148,10 +148,10 @@ while T == True:
                         modorepete = True
                     if resposta == "parar":
                         Avisafinal = True
-                        Sair = input('\n'"Deseja mesmo parar [S/N]? Caso responda  S, sairá com R$ {0} ".format(Lpremio[id-1]))
+                        Sair = input('\n''Deseja mesmo parar [S/N]? Caso responda  "S", sairá com R$ {0} '.format(Lpremio[id-1]))
                         while Sair != "S" and Sair != "N":
                             print("Opção inválida!")
-                            Sair = input('\n'"Deseja mesmo parar [S/N]? Caso responda  S, sairá com R$ {0} ".format(Lpremio[id-1]))
+                            Sair = input('\n''Deseja mesmo parar [S/N]? Caso responda  "S", sairá com R$ {0} '.format(Lpremio[id-1]))
                         if Sair == "S":
                             print('\n'"Ok! Você parou e seu prêmio é de R$ {0}".format(Lpremio[id-1]))
                             jogardnv = input("Gostaria de jogar de novo [S/N]?")
