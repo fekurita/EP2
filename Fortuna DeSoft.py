@@ -1,3 +1,5 @@
+from funcoes.py import *
+
 print ("Olá! Você está na Fortuna DeSoft e terá a oportunidade de enriquecer!"'\n')
 Nome =input("Qual seu nome?")
 print('\n'"Ok {0}, você tem direito a pular 3 vezes e 2 ajudas!"'\n'"As opções de resposta são A, B, C, D, ajuda, pula e parar!"'\n'.format(Nome.upper()))
