@@ -1,3 +1,4 @@
+
 def transforma_base (L):
     DF={}
     for D in L:
@@ -6,3 +7,4 @@ def transforma_base (L):
         else:
             DF[D["nivel"]].append(D)
     return DF    
+

@@ -1,6 +1,8 @@
 from funcoes import *
-with open("Questoes.txt", 'r')as arquivo:
-    Questoes = arquivo.read()
+from Questoes import *
+
+Questoespn =transforma_base(quest)
+Questoesusa =[]
 
 print ("Olá! Você está na Fortuna DeSoft e terá a oportunidade de enriquecer!"'\n')
 Nome =input("Qual seu nome?")
@@ -17,7 +19,10 @@ while T == True:
         while T2 == True:
             if Continuar =="":
                 T2 = False
-                print(Questoes)
+                print('\n''\n')
+                print(sorteia_questao_inedida(Questoespn,'facil',Questoesusa))
+
+
             else:
                 Continuar =input("Aperte ENTER para continuar...")
 
