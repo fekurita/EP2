@@ -143,14 +143,31 @@ while T == True:
                             Sair = input('\n'"Deseja mesmo parar [S/N]? Caso responda  S, sairá com R$ {0} ".format(Lpremio[id-1]))
                         if Sair == "S":
                             print('\n'"Ok! Você parou e seu prêmio é de R$ {0}".format(Lpremio[id-1]))
-                            T3 = False
+                            jogardnv = input("Gostaria de jogar de novo [S/N]?")
+                            while jogardnv != "S" and jogardnv != "N":
+                                print("Opção inválida!")
+                                jogardnv = input("Gostaria de jogar de novo [S/N]?")
+                                if jogardnv == "S":
+                                    id = 1
+                                if jogardnv == "N":
+                                    T3 = False
+                            print("Jogo encerrado")
+
                         if Sair == "N":
                             modorepete=True
 
 
                     if resposta != questaoatual["correta"] and Avisafinal==False: 
                         print ("Que pena! Você errou e vai sair sem nada :(") 
-                        T3 = False
+                        jogardnv = input("Gostaria de jogar de novo [S/N]?")
+                        while jogardnv != "S" and jogardnv != "N":
+                            print("Opção inválida!")
+                            jogardnv = input("Gostaria de jogar de novo [S/N]?")
+                        if jogardnv == "N":
+                            id = 1
+                        if jogardnv == "S":
+                            T3 = False
+                            print("Jogo encerrado")
 
 
             else:
