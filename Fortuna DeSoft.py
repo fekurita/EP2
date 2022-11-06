@@ -163,10 +163,8 @@ while T == True:
                                 if jogardnv == "N":
                                     T3 = False
                             print("Jogo encerrado")
-
                         if Sair == "N":
                             modorepete=True
-
 
                     if resposta != questaoatual["correta"] and Avisafinal==False: 
                         print ("Que pena! Você errou e vai sair sem nada :(") 
@@ -180,11 +178,7 @@ while T == True:
                         if jogardnv == "N":
                             T3 = False
                             print("Jogo encerrado")
-
             else:
                 Continuar =input("Aperte ENTER para continuar...")
-
     else:
         Comeco =input("Aperte ENTER para continuar...") 
-
-
