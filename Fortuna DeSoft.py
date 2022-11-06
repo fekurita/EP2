@@ -16,6 +16,14 @@ T = True
 T2 = True
 T3 = True
 T4 = True
+T5 = True
+
+modopulo = False
+
+Avisapulo = False
+
+Pulos = 3
+Ajudas = 2
 while T == True:
     if Comeco == '':
         T = False
@@ -26,6 +34,7 @@ while T == True:
                 T2 = False
                 while T3 == True and id<10:
                     T4=True
+                    Avisapulo = False
                     if id<3:
                         nivel = "facil"
                     elif id>3 and id<7:
@@ -33,23 +42,57 @@ while T == True:
                     else:
                         nivel = "dificil"
                     print('\n''\n')
-                    questaoatual = sorteia_questao_inedida(Questoespn,nivel,Questoesusa)
-                    print(questao_para_texto(questaoatual,id))
+                    if modopulo == False :
+                        questaoatual = sorteia_questao_inedida(Questoespn,nivel,Questoesusa)
+                        questaoatualtexto = questao_para_texto(questaoatual,id)
+                    print(questaoatualtexto)
                     resposta = input('\n'"Qual sua resposta?!")
                     if resposta == questaoatual["correta"]:
+                        modopulo = False
                         print ("Você acertou! Seu prêmio atula é de R$ {}".format(Lpremio[id-1]))
                         if id ==3:
                             print("HEY! Você passou para o Nível MEDIO!")
                         if id == 6:
                             print("HEY! Você passou para o Nível DIFICIL!")
                         id +=1
-                        while T4 == True:
+                        if id ==10 :
+                            print("PARABÉNS, você zerou o jogo e ganhou um milhão de reais")
+                        while T4 == True and id<10:
                             Continuarfinal = input("Aperte ENTER para continuar...")
                             if Continuarfinal == "":
                                 T4 = False
                             else:
                                 Continuarfinal =input("Aperte ENTER para continuar...")
-                    else: 
+                    if resposta == "pula" and Pulos>0:
+                        Avisapulo = True
+                        T5 = True
+                        Pulos-=1
+                        if Pulos>=1:
+                            print("Ok pulando! Você ainda tem {0} pulos!".format(Pulos))
+                        else:
+                            print("Ok pulando! Você não tem mais direito a pulos!")
+                        while T5 == True:
+                            Continuarpulos = input("Aperte ENTER para continuar...")
+                            if Continuarpulos == "":
+                                T5 = False
+                            else:
+                                Continuarpulos = input("Aperte ENTER para continuar...")
+                    if resposta == "pula" and Pulos == 0:
+                        Avisapulo = True
+                        T5 = True
+                        T4 = True
+                        print("Não deu! Você não tem mais direito a pulos")
+                        while T5 == True:
+                            Continuarpulos = input("Aperte ENTER para continuar...")
+                            if Continuarpulos == "":
+                                T5 = False
+                            else:
+                                Continuarpulos = input("Aperte ENTER para continuar...")
+                        modopulo = True
+
+
+
+                    if resposta != questaoatual["correta"] and Avisapulo==False: 
                         print ("Que pena! Você errou e vai sair sem nada :(") 
                         T3 = False
 
