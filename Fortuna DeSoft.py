@@ -1,4 +1,6 @@
-from funcoes.py import *
+from funcoes import *
+with open("Questoes.txt", 'r')as arquivo:
+    Questoes = arquivo.read()
 
 print ("Olá! Você está na Fortuna DeSoft e terá a oportunidade de enriquecer!"'\n')
 Nome =input("Qual seu nome?")
