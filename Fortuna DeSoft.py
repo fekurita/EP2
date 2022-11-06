@@ -17,7 +17,7 @@ while T == True:
         while T2 == True:
             if Continuar =="":
                 T2 = False
-                
+                print(Questoes)
             else:
                 Continuar =input("Aperte ENTER para continuar...")
 
