@@ -25,6 +25,7 @@ while T == True:
             if Continuar =="":
                 T2 = False
                 while T3 == True and id<10:
+                    T4=True
                     if id<3:
                         nivel = "facil"
                     elif id>3 and id<7:
@@ -37,9 +38,13 @@ while T == True:
                     resposta = input('\n'"Qual sua resposta?!")
                     if resposta == questaoatual["correta"]:
                         print ("Você acertou! Seu prêmio atula é de R$ {}".format(Lpremio[id-1]))
+                        if id ==3:
+                            print("HEY! Você passou para o Nível MEDIO!")
+                        if id == 6:
+                            print("HEY! Você passou para o Nível DIFICIL!")
                         id +=1
                         while T4 == True:
-                            Continuarfinal =input("Aperte ENTER para continuar...")
+                            Continuarfinal = input("Aperte ENTER para continuar...")
                             if Continuarfinal == "":
                                 T4 = False
                             else:
