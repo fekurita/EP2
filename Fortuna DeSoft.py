@@ -54,7 +54,8 @@ while T == True:
                         resposta = input('\n'"Qual sua resposta?!")
                     if resposta == questaoatual["correta"] and id<=9:
                         modorepete = False
-                        print ("Você acertou! Seu prêmio atula é de R$ {}".format(Lpremio[id]))
+                        if id<9:
+                            print ("Você acertou! Seu prêmio atula é de R$ {}".format(Lpremio[id]))
                         if id ==3:
                             print('\n'"HEY! Você passou para o Nível MEDIO!")
                         if id == 6:
