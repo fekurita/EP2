@@ -1,5 +1,6 @@
 from funcoes import *
 from Questoes import *
+from termcolor import *
 
 Questoespn =transforma_base(quest)
 Questoesusa =[]
@@ -7,9 +8,10 @@ Questoesusa =[]
 id = 1
 Lpremio=[0.00,1000.00,5000.00,10000.00,30000.00,50000.00,100000.00,300000.00,500000.00,1000000.00]
 
-print ("Olá! Você está na Fortuna DeSoft e terá a oportunidade de enriquecer!"'\n')
+cprint("Olá! Você está na Fortuna DeSoft e terá a oportunidade de enriquecer!"'\n',"magenta")
 Nome =input("Qual seu nome?")
-print('\n'"Ok {0}, você tem direito a pular 3 vezes e 2 ajudas!"'\n''As opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!''\n'.format(Nome.upper()))
+print('\n'"Ok {0}, você tem direito a pular 3 vezes e 2 ajudas!".format(Nome.upper()))
+cprint('As opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!''\n',"cyan")
 Comeco =input("Aperte ENTER para continuar...")
 
 T = True
@@ -50,12 +52,13 @@ while T == True:
                     print(questaoatualtexto)
                     resposta = input('\n'"Qual sua resposta?!")
                     while resposta != "A"and resposta != "B"and resposta != "C"and resposta != "D"and  resposta != "ajuda"and resposta != "pula"and resposta != "parar":
-                        print("Opção inválida!"'\n''As opções de resposta são  "A", "B", "C", "D", "ajuda", "pula" e "parar"!')
+                        cprint("Opção inválida!","red")
+                        cprint('As opções de resposta são  "A", "B", "C", "D", "ajuda", "pula" e "parar"!',"cyan")
                         resposta = input('\n'"Qual sua resposta?!")
                     if resposta == questaoatual["correta"] and id<=9:
                         modorepete = False
                         if id<9:
-                            print ("Você acertou! Seu prêmio atula é de R$ {}".format(Lpremio[id]))
+                            cprint ("Você acertou! Seu prêmio atual é de R$ {0}".format(Lpremio[id]),"green")
                         if id ==3:
                             print('\n'"HEY! Você passou para o Nível MEDIO!")
                         if id == 6:
@@ -69,10 +72,10 @@ while T == True:
                             else:
                                 Continuarfinal =input("Aperte ENTER para continuar...")
                     if resposta == questaoatual["correta"] and id==10:
-                        print("PARABÉNS, você zerou o jogo e ganhou um milhão de reais")
+                        cprint("PARABÉNS, você zerou o jogo e ganhou um milhão de reais","green")
                         jogardnv = input("Gostaria de jogar de novo [S/N]?")
                         while jogardnv != "S" and jogardnv != "N":
-                            print("Opção inválida!")
+                            cprint("Opção inválida!","red")
                             jogardnv = input("Gostaria de jogar de novo [S/N]?")
                         if jogardnv == "S":
                             id = 1
@@ -97,7 +100,7 @@ while T == True:
                         Avisafinal = True
                         T5 = True
                         T4 = True
-                        print("Não deu! Você não tem mais direito a pulos")
+                        cprint("Não deu! Você não tem mais direito a pulos","red")
                         while T5 == True:
                             Continuarpulos = input("Aperte ENTER para continuar...")
                             if Continuarpulos == "":
@@ -122,9 +125,9 @@ while T == True:
                                 else:
                                     Continuarajuda = input("Aperte ENTER para continuar...")
 
-                            print(gera_ajuda(questaoatual))
+                            cprint(gera_ajuda(questaoatual),"green")
                         else:
-                            print("Não deu! Você já pediu ajuda nesta questão!")
+                            cprint("Não deu! Você já pediu ajuda nesta questão!","red")
                         T5 = True
                         while T5 == True:
                             Continuarajuda = input("Aperte ENTER para continuar...")
@@ -138,7 +141,7 @@ while T == True:
                         Avisafinal = True
                         T5 = True
                         T4 = True
-                        print("Não deu! Você não tem mais direito a ajuda!")
+                        cprint("Não deu! Você não tem mais direito a ajuda!","red")
                         while T5 == True:
                             Continuarpulos = input("Aperte ENTER para continuar...")
                             if Continuarpulos == "":
@@ -150,13 +153,13 @@ while T == True:
                         Avisafinal = True
                         Sair = input('\n''Deseja mesmo parar [S/N]? Caso responda  "S", sairá com R$ {0} '.format(Lpremio[id-1]))
                         while Sair != "S" and Sair != "N":
-                            print("Opção inválida!")
+                            cprint("Opção inválida!","red")
                             Sair = input('\n''Deseja mesmo parar [S/N]? Caso responda  "S", sairá com R$ {0} '.format(Lpremio[id-1]))
                         if Sair == "S":
                             print('\n'"Ok! Você parou e seu prêmio é de R$ {0}".format(Lpremio[id-1]))
                             jogardnv = input("Gostaria de jogar de novo [S/N]?")
                             while jogardnv != "S" and jogardnv != "N":
-                                print("Opção inválida!")
+                                cprint("Opção inválida!","red")
                                 jogardnv = input("Gostaria de jogar de novo [S/N]?")
                                 if jogardnv == "S":
                                     id = 1
@@ -168,10 +171,10 @@ while T == True:
                             modorepete=True
 
                     if resposta != questaoatual["correta"] and Avisafinal==False: 
-                        print ("Que pena! Você errou e vai sair sem nada :(") 
+                        cprint ("Que pena! Você errou e vai sair sem nada :(","yellow") 
                         jogardnv = input("Gostaria de jogar de novo [S/N]?")
                         while jogardnv != "S" and jogardnv != "N":
-                            print("Opção inválida!")
+                            cprint("Opção inválida!","red")
                             jogardnv = input("Gostaria de jogar de novo [S/N]?")
                         if jogardnv == "S":
                             id = 1
