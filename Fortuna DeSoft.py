@@ -28,6 +28,14 @@ Questaosalva= ""
 
 Pulos = 3
 Ajudas = 2
+
+for Termo in valida_questoes(quest):
+
+    if Termo != {}:
+        T = False
+        print("Possui questões invalidadas:")
+        print(valida_questoes(quest))
+
 while T == True:
     if Comeco == '':
         T = False
@@ -165,14 +173,14 @@ while T == True:
                             while jogardnv != "S" and jogardnv != "N":
                                 cprint("Opção inválida!","red")
                                 jogardnv = input("Gostaria de jogar de novo [S/N]?")
-                                if jogardnv == "S":
-                                    id = 1
-                                    Ajudas = 2
-                                    Pulos = 3
-                                    Questoesusa =[]
-                                if jogardnv == "N":
-                                    T3 = False
-                            print("Jogo encerrado")
+                            if jogardnv == "S":
+                                id = 1
+                                Ajudas = 2
+                                Pulos = 3
+                                Questoesusa =[]
+                            if jogardnv == "N":
+                                T3 = False
+                                print("Jogo encerrado")
                         if Sair == "N":
                             modorepete=True
 
