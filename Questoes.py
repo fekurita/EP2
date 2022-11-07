@@ -4,7 +4,7 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           'correta': 'C'},
 
          {'titulo': 'Qual personagem do anime Jojos Bizarre Adventure tem o stand (poder sobrenatural) chamado de Purple Haze?',
-          'nivel': '',
+          'nivel': 'facil',
           'opcoes': {'A': 'Bruno Bucciarati', 'B': 'Pannacotta Fugo', 'C': 'Nijimura Okuyasu', 'D': 'Narciso Anasui'},
           'correta': 'B'},
 
