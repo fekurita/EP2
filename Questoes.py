@@ -3,6 +3,106 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           'opcoes': {'A': '-19', 'B': '85', 'C': '89', 'D': '99'},
           'correta': 'C'},
 
+         {'titulo': 'Qual personagem do anime Jojos Bizarre Adventure tem o stand (poder sobrenatural) chamado de Purple Haze?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Bruno Bucciarati', 'B': 'Pannacotta Fugo', 'C': 'Nijimura Okuyasu', 'D': 'Narciso Anasui'},
+          'correta': 'B'},
+
+         {'titulo': 'De quem é a famosa frase “Penso, logo existo”?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Platão', 'B': 'Galileu Galilei', 'C': 'Descartes', 'D': 'Sócrates'},
+          'correta': 'C'},
+
+         {'titulo': 'De onde é a invenção do chuveiro elétrico?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'França', 'B': 'Inglaterra', 'C': 'Brasil', 'D': 'Austrália'},
+          'correta': 'C'},
+
+         {'titulo': 'Quais o menor e o maior país do mundo?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Vaticano e Rússia', 'B': 'Nauru e China', 'C': 'Mônaco e Canadá', 'D': 'Malta e Estados Unidos'},
+          'correta': 'A'}, 
+
+         {'titulo': 'Qual o nome do presidente do Brasil que ficou conhecido como Jango?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Jânio Quadros', 'B': 'Jacinto Anjos', 'C': 'João Goulart', 'D': 'Getúlio Vargas'},
+          'correta': 'C'},
+
+         {'titulo': 'Qual o livro mais vendido no mundo a seguir à Bíblia?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'O Senhor dos Anéis', 'B': 'Dom Quixote', 'C': 'O Pequeno Príncipe', 'D': 'Ela, a Feiticeira'},
+          'correta': 'B'}, 
+
+         {'titulo': 'Quem se autointitulou irmão de jesus cristo na rebelião de Taiping?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Mao Tsé-Tung', 'B': 'Hong Xiuquan', 'C': 'Deng Xiaoping', 'D': 'Sun Tzu '},
+          'correta': 'B'},
+
+          {'titulo': 'Quantas casas decimais tem o número pi?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Duas', 'B': 'Centenas', 'C': 'Infinitas', 'D': 'Vinte'},
+          'correta': 'C'},
+
+          {'titulo': 'Atualmente, quantos elementos químicos a tabela periódica possui?',
+          'nivel': 'medio',
+          'opcoes': {'A': '113', 'B': '109', 'C': '108', 'D': '118'},
+          'correta': 'D'},
+
+          {'titulo': 'Qual foi a guerra com a menor duração?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Guerra de 100 horas', 'B': 'Guerras de Chola-Chalakya ', 'C': 'Guerra Anglo-Zanzibar', 'D': 'Guerra Indo-Pakistani de 1971'},
+          'correta': 'C'},
+
+          {'titulo': 'O que a palavra legend significa em português?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Legenda', 'B': 'Conto', 'C': 'História', 'D': 'Lenda'},
+          'correta': 'D'},
+
+          {'titulo': 'Qual o número mínimo de jogadores em cada time numa partida de futebol?',
+          'nivel': 'facil',
+          'opcoes': {'A': '8', 'B': '10', 'C': '7', 'D': '9'},
+          'correta': 'C'},
+
+          {'titulo': 'Quais são os únicos 3 países com a cor roxa em sua bandeira?',
+          'nivel': 'dificil',
+          'opcoes': {'A': ' Iêmen, Quirguistão e Turcomenistão', 'B': 'Mali, Mauritânia e Togo', 'C': 'Dominica, El Salvador e Nicaragua', 'D': 'Malta, San Marino e Cambodia'},
+          'correta': 'C'},
+
+          {'titulo': 'Quem pintou "Guernica"?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Paul Cézanne', 'B': 'Pablo Picasso', 'C': 'Diego Rivera', 'D': 'Tarsila do Amaral'},
+          'correta': 'B'},
+
+          {'titulo': 'Quem tem a fruta da luz no anime "One Piece", de Eiichiro Oda?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Sakazuki', 'B': 'Fujitora', 'C': 'Akainu', 'D': 'Kizaru'},
+          'correta': 'D'},
+
+          {'titulo': 'Qual campeão do jogo "League of Legends" tem a habilidade "Contra-Ataque"?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Jax', 'B': 'Ryze', 'C': 'Draven', 'D': 'Kled'},
+          'correta': 'A'},
+
+          {'titulo': 'Em que período da pré-história o fogo foi descoberto?',
+          'nivel': 'media',
+          'opcoes': {'A': 'Neolítico', 'B': 'Paleolítico', 'C': 'Idade dos Metais', 'D': 'Período da Pedra Polida'},
+          'correta': 'B'},
+
+          {'titulo': 'Qual a montanha mais alta do Brasil?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Pico da Neblina', 'B': 'Pico Paraná', 'C': 'Monte Roraima', 'D': 'Pico da Bandeira'},
+          'correta': 'A'},
+
+          {'titulo': 'Qual a velocidade da luz?',
+          'nivel': 'facil',
+          'opcoes': {'A': '300 000 000 metros por segundo (m/s)', 'B': '150 000 000 metros por segundo (m/s)', 'C': '199 792 458 metros por segundo (m/s)', 'D': '299 792 458 metros por segundo (m/s)'},
+          'correta': 'D'},
+
+          {'titulo': 'Em qual local da Ásia o português é língua oficial?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Índia', 'B': 'Filipinas', 'C': 'Macau', 'D': 'Moçambique'},
+          'correta': 'C'},
+
          {'titulo': 'Qual a capital do Brasil?',
           'nivel': 'facil',
           'opcoes': {'A': 'Brasília', 'B': 'Rio de janeiro', 'C': 'São Paulo', 'D': 'Osasco'},

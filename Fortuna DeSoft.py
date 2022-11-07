@@ -79,6 +79,10 @@ while T == True:
                             jogardnv = input("Gostaria de jogar de novo [S/N]?")
                         if jogardnv == "S":
                             id = 1
+                            Ajudas = 2
+                            Pulos = 3
+                            Questoesusa =[]
+
                         if jogardnv == "N":
                             T3 = False
                         print("Jogo encerrado")   
@@ -163,6 +167,8 @@ while T == True:
                                 jogardnv = input("Gostaria de jogar de novo [S/N]?")
                                 if jogardnv == "S":
                                     id = 1
+                                    Ajudas = 2
+                                    Pulos = 3
                                     Questoesusa =[]
                                 if jogardnv == "N":
                                     T3 = False
@@ -179,6 +185,8 @@ while T == True:
                         if jogardnv == "S":
                             id = 1
                             Questoesusa =[]
+                            Ajudas = 2
+                            Pulos = 3
                         if jogardnv == "N":
                             T3 = False
                             print("Jogo encerrado")
